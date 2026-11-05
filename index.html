@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Графики — Электро vs Гибрид · Физика Автомобиля</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="block-page">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+
+  <div class="page-bg"><div class="hero-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div></div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-logo">ФизАвто<span>·26</span></div>
+    <span class="nav-single">Графики</span>
+  </nav>
+
+  <section class="charts-section" id="charts">
+    <div class="section-label">/ 04 — Графики</div>
+    <h2 class="section-title">Визуальный<br/><em>анализ</em></h2>
+    <div class="charts-grid">
+      <div class="chart-card reveal">
+        <div class="chart-title">Запас хода (км)</div>
+        <canvas id="rangeChart"></canvas>
+      </div>
+      <div class="chart-card reveal" style="transition-delay:0.15s">
+        <div class="chart-title">Мощность (л.с.)</div>
+        <canvas id="powerChart"></canvas>
+      </div>
+      <div class="chart-card chart-wide reveal" style="transition-delay:0.1s">
+        <div class="chart-title">КПД двигателей: сравнение типов</div>
+        <canvas id="kpdChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ФизАвто<span>·26</span></div>
+      <p>Учебный проект по физике</p>
+      <p class="footer-author">Автор: Весёлкин Данил Андреевич, 11 Б класс</p>
+      <p class="footer-note">Научный руководитель: Павлова Ольга Владимировна</p>
+      <p class="footer-school">МОУ «Средняя школа № 2 имени Л.П. Семеновой», г. Ярославль · 2026–2027 уч. год</p>
+    </div>
+  </footer>
+
+  <!-- ─── MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-glass" id="modal">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
